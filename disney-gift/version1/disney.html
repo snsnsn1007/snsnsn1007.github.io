@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney Birthday Surprise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="disney-bg">
+    <div class="disney-container">
+        <!-- Background music -->
+        <audio id="birthdayMusic" loop>
+            <source src="disneymusic.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Disney header with magical elements -->
+        <!-- <div class="disney-header">
+            <h1 class="disney-title">Go to...</h1>
+            <p class="disney-subtitle">Birthday Gift Just For You</p>
+        </div> -->
+
+        <!-- Center button -->
+        <div class="center-button-container">
+            <button class="center-button" onclick="openTicketDialog()">
+                <span class="button-text">Open Ticket</span>
+                <span class="sparkle"></span>
+            </button>
+        </div>
+
+        <!-- Ticket Dialog -->
+        <div id="ticketDialog" class="ticket-dialog-overlay hidden">
+            <div class="ticket-dialog">
+                <button class="close-button" onclick="closeTicketDialog()">✕</button>
+                
+                <div class="ticket-header">
+                    <h2>Disney Park Ticket</h2>
+                    <p class="ticket-subtitle">Your Birthday Gift</p>
+                </div>
+
+                <div class="ticket-content">
+                    <div class="ticket-info">
+                        <label>Disney Account ID</label>
+                        <div class="account-id-display">
+                            <input type="text" id="accountIdInput" value="DIS-2024-12345678" readonly>
+                            <button class="copy-button" onclick="copyAccountId()">Copy</button>
+                        </div>
+                    </div>
+
+                    <p class="ticket-description">Use this ID to claim your Disney Park tickets!</p>
+
+                    <button class="disney-app-button" onclick="openDisneyApp()">
+                        Open Disney App →
+                    </button>
+                </div>
+
+                <div class="ticket-footer">
+                    <p>Have an enchanting time! 🎆</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

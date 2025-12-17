@@ -13,9 +13,13 @@
             <source src="disneymusic.mp3" type="audio/mpeg">
         </audio>
 
+        <div id="disney-logo-container">
+            <img src="images/disneylogo.png" id="disney-logo">
+        </div>
+
         <!-- Disney header with magical elements -->
         <div class="disney-header">
-            <p class="disney-subtitle">りんちゃんへのプレゼント！！</p>
+            <p class="disney-subtitle">りんちゃんへ<br>サプライズプレゼント！！</p>
         </div> 
 
         <!-- Center button -->
@@ -32,28 +36,28 @@
                 <button class="close-button" onclick="closeTicketDialog()">✕</button>
                 
                 <div class="ticket-header">
-                    <h2>Disney Park Ticket</h2>
-                    <p class="ticket-subtitle">Your Birthday Gift</p>
+                    <h2>Disney Sea Ticket</h2>
+                    <p class="ticket-subtitle">12月21日</p>
                 </div>
 
                 <div class="ticket-content">
                     <div class="ticket-info">
                         <label>Disney Account ID</label>
                         <div class="account-id-display">
-                            <input type="text" id="accountIdInput" value="DIS-2024-12345678" readonly>
-                            <button class="copy-button" onclick="copyAccountId()">Copy</button>
+                            <input type="text" id="accountIdInput" value="5f4bb8532d2f9b969ed68ad7eaae839c9489f2c0d2ac283f1cafb3d7797f43cb662503212d6810786592a9b8ce4e5e64d94ed07f921fc54a86d5444714139d5f" readonly>
+                            <button class="copy-button" onclick="copyAccountId()">コピー</button>
                         </div>
                     </div>
 
-                    <p class="ticket-description">Use this ID to claim your Disney Park tickets!</p>
+                    <p class="ticket-description">IDをコピーしたら、アプリに飛んでね！！</p>
 
                     <button class="disney-app-button" onclick="openDisneyApp()">
-                        Open Disney App →
+                        ディズニーアプリ →
                     </button>
                 </div>
 
                 <div class="ticket-footer">
-                    <p>Have an enchanting time! 🎆</p>
+                    <p>一緒に楽しもう！ 🎆</p>
                 </div>
             </div>
         </div>

@@ -17,9 +17,7 @@
 body {
   font-family: "Arial", sans-serif;
   overflow-x: hidden;
-  background-image: url(images/background.png);
 }
-
 
 /* === INDEX PAGE STYLES === */
 .birthday-index {
@@ -85,6 +83,11 @@ body {
   justify-content: center;
   position: relative;
   overflow: hidden;
+}
+
+#disney-logo {
+  height: 50%;
+  width: 50%;
 }
 
 /* Animated stars background */

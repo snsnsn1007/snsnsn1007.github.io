@@ -9,9 +9,10 @@
 <body class="disney-bg">
     <div class="disney-container">
         <!-- Background music -->
-        <audio id="birthdayMusic" loop>
+        <audio id="birthdayMusic" autoplay loop>
             <source src="disneymusic.mp3" type="audio/mpeg">
         </audio>
+
 
         <div id="disney-logo-container">
             <img src="images/disneylogo.png" id="disney-logo">
@@ -45,7 +46,7 @@
                         <label>Disney Account ID</label>
                         <div class="account-id-display">
                             <input type="text" id="accountIdInput" value="5f4bb8532d2f9b969ed68ad7eaae839c9489f2c0d2ac283f1cafb3d7797f43cb662503212d6810786592a9b8ce4e5e64d94ed07f921fc54a86d5444714139d5f" readonly>
-                            <button class="copy-button" onclick="copyAccountId()">コピー</button>
+                            <button class="copy-button" onclick="copyAccountId()"><span class="id-copy"><span></span></span></button>
                         </div>
                     </div>
 

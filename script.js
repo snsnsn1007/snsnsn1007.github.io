@@ -1,30 +1,24 @@
-// Navigate from index page to Disney page
+// index.html → Disneyページ遷移（iOS対応）
 function navigateToDisney() {
-  window.location.href = "disney.html"
+  const music = document.getElementById("preloadMusic")
+
+  if (music) {
+    // ユーザー操作内で一瞬再生 → 即停止（iOSの再生許可を取る）
+    music.play().then(() => {
+      music.pause()
+      music.currentTime = 0
+
+      // 再生許可を得た状態で遷移
+      window.location.href = "disney.html"
+    }).catch(() => {
+      // 失敗しても遷移はする
+      window.location.href = "disney.html"
+    })
+  } else {
+    window.location.href = "disney.html"
+  }
 }
 
-// Play music when Disney page loads
-window.addEventListener("load", () => {
-  const music = document.getElementById("birthdayMusic")
-  if (music) {
-    // Auto-play with user interaction
-    music.play().catch((error) => {
-      console.log("Auto-play prevented. Music will play on first interaction.")
-    })
-  }
-})
-
-// Enable music play on first user interaction
-document.addEventListener(
-  "click",
-  function enableAudio() {
-    const music = document.getElementById("birthdayMusic")
-    if (music && music.paused) {
-      music.play()
-    }
-  },
-  { once: true },
-)
 
 // Open ticket dialog
 function openTicketDialog() {
